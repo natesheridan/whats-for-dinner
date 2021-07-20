@@ -13,6 +13,7 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.824), rgba(255, 255, 255, 0.872)),
     url("./assets/burger-friends.jpg");
     margin : 0;
+    font-family: 'Roboto', sans-serif;
 }
 .navbar {
     list-style-type: none;
@@ -51,19 +52,58 @@ ul {
     margin: 0;
     top: 50%;
 }
-.selectionPane{
-    /* 
+                                        /* Posistion
+                                    distance from top of page 15%
+                                    distance from right edge 8%
+                                    distance from bottom 26%
 
-        Posistion
-    distance from top of page 15%
-    distance from right edge 8%
-    distance from bottom 26%
+                        
+                                        Size
+                                    Box covers 35%
+                                    Box covers 50%
 
-
-        Size
-    Box covers 35%
-    Box covers 50%
-
-    spacing
-    */
+https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-40-43.png */
+.content{
+   border: 1px solidrgba(34, 0, 0, 0);
+   background-color: rgba(255, 255, 255, 0);
+   margin: 15% 8%;
+   height: 530px;
+   overflow: visible;
+   /* total width : 83% */
 }
+
+.selection-pane{
+   position: relative;
+   border: 1px solidrgb(0, 34, 5);
+   background-color: rgba(1, 0, 0, 0.413);
+   border-radius: 50px;
+   height: 100%;
+   width: 42%;
+   overflow: visible;
+   float: left;
+}
+.selection-title{
+    font-size: 50px;
+    float: top;
+    margin: 20px 20px;
+}
+
+
+
+
+
+.results-pane{
+   position: relative;
+   border: 1px solidrgb(0, 34, 5);
+   background-color: rgba(1, 0, 0, 0.413);
+   border-radius: 50px;
+   height: 100%;
+   width: 42%;
+   float: right;
+}
+.results-pane.img{
+    position: relative;
+    height: 100%;
+    width: 42%;
+}
+
