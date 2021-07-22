@@ -14,6 +14,9 @@ function updateRadioValue(){
         radioValue = firstWord
         radioValueLC = radioValue.toLowerCase();
     }
+    else if (radioValue === "Side" || radioValue === "Dessert"){
+        radioValueLC = radioValue.toLowerCase();
+    }
     else if (radioValue === ""){
         radioValueLC = "";
     }
@@ -63,7 +66,7 @@ function getRandomIndex(array) {
   
 
 letsCookButton.addEventListener('click', function(){
-    radioValue = document.forms.dishchoice.elements.option.value
+    updateRadioValue();
     if (radioValueLC === "side"){
         pushRandomSide()
     }
