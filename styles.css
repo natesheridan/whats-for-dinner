@@ -10,11 +10,10 @@ red - #ee5253
 
 body {
     background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.824), rgba(255, 255, 255, 0.872)),
+    
     url("./assets/burger-friends.jpg");
     margin : 0;
     font-family: 'Roboto', sans-serif;
-    position: fixed;
     height: 100%;
     width: 100%;
 }
@@ -79,25 +78,34 @@ ul {
                                     Box covers 50%
 
 https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-40-43.png */
+
+
+/* CONTENT FLEX */
 .content{
    border: 1px solidrgba(34, 0, 0, 0);
    background-color: rgba(255, 255, 255, 0);
-   margin: 15% 8%;
+   margin: 10% 8%;
    height: 50%;
    overflow: visible;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
    /* total width : 83% */
 }
-
-.selection-pane{
+.pane{
    position: relative;
    border: 1px solidrgb(0, 34, 5);
    background-color: rgba(255, 255, 255, 0.413);
    border-radius: 50px;
    height: 100%;
    width: 42%;
-   overflow: visible;
-   float: left;
+   min-width: 400px;
+   margin-top: 20px;
 }
+
+/* END CONTENT FLEX */
+/* SELECTION PANE */
+
 .selection-title{
     position: fixed;
     /* border: 1px solidrgb(0, 34, 5); */
@@ -130,7 +138,7 @@ input{
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Encode Sans SC', sans-serif;
-    font-size: 1.5vh;
+    font-size: 1.5vw;
 }
 @keyframes grow {
     0% {font-size: 2vw ;}
@@ -152,20 +160,11 @@ input{
 
 }
 
+/* END SELECTION PANE */
+/* RESULTS PANE */
 
 
 
-
-
-.results-pane{
-   position: relative;
-   border: 1px solidrgb(0, 34, 5);
-   background-color: rgba(255, 255, 255, 0.413);
-   border-radius: 50px;
-   height: 100%;
-   width: 42%;
-   float: right;
-}
 .cookpot{
     position: absolute;
     height: 55%;
@@ -215,6 +214,8 @@ input{
     transform: translate(-50%, -50%);
     margin: 45vh 0%;
     font-size : 1.5vw;
+    text-decoration: none;
+    color: #065350
 }
 .find-recipe-button img{
     width: 1vw;
@@ -232,3 +233,4 @@ input{
     100% {font-size:2.0vw}
 
 }
+/* END RESULTS PANE */
