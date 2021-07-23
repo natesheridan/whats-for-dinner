@@ -4,6 +4,7 @@ Describe here the changes you made, if you made any fixes to old code, what issu
 
 # Description of fixes:
 
+describe the changes here you used to fix the code
 - [ ] Bug fix (non-breaking change which fixes an issue)
   -
 - [ ] New feature (non-breaking change which adds functionality)
