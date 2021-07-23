@@ -2,35 +2,46 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <section class="navbar">
-        <h1>What's for Dinner?</h1>
-        <button class="addRecipeBtn">Add a Recipe</button>
-      </section>
-    </header>
+    <div class="navbar">
+      <ul>
+        <li><a class="title">What's for Dinner?</a></li>
+        <li><a id="addRecipeBtn" class="addRecipeBtn">Add a Recipe</a></li>
+      </ul>
+    </div>
 
-
-    <section id="selection-pane">
-      <div>
-        <h2>What are you looking for?</h2>
-        <form>
-          <ul>
-          <li><input type="radio" class="sideRadio" name="dishchoice" value="Side"><label for="sideRadio"> Side</label></li>
-          <li><input type="radio" class="mainRadio" name="dishchoice" value="Main Dish"><label for="sideRadio"> Main Dish</label></li>
-          <li><input type="radio" class="dessertRadio" name="dishchoice" value="Dessert"><label for="sideRadio"> Dessert</label></li>
-          <li><input type="radio" class="mealRadio" name="dishchoice" value="Entire Meal"><label for="sideRadio"> Entire Meal</label></li>
-          <li><div class="submitBtn">Let's Cook!</div></li>
-          </ul>
-        </form>
+    <div class="content">
+      <div class="selection-pane">
+        <div>
+          <span class="selection-title">What are you looking for?</span>
+          <form class="selection-radios">
+            <ul>
+            <li><input type="radio" name="dishchoice" value="Side"><label for="sideRadio"> Side</label></li>
+            <li><input type="radio" name="dishchoice" value="Main Dish"><label for="sideRadio"> Main Dish</label></li>
+            <li><input type="radio" name="dishchoice" value="Dessert"><label for="sideRadio"> Dessert</label></li>
+            <li><input type="radio" name="dishchoice" value="Entire Meal"><label for="sideRadio"> Entire Meal</label></li>
+            </ul>
+          </form>
+          <button class="submitBtn">Let's Cook!</button>
+        </div>
       </div>
-    </section>
+      <div class="results-pane">
+        <!-- <img class="cookpot" src="assets/cookpot.svg"> -->
+
+        <section class="results">
+          <span class = "make-text">You should make:</span>
+          <img class = "results-img" src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-articleLarge.jpg">
+          <span class = "results-text">Black Forest Cake</span>
+        </section>
+
+      </div>
+    </div>
 
 
-    <section id="results-pane">
-      <img src="assets/cookpot.svg">
-    </section>
 
 
   </body>
