@@ -28,7 +28,7 @@ function pushRandomSide(){
     console.log(randomSide)
     results.innerHTML = `
     <span class = "make-text">You should make:</span>
-    <img class = "results-img" src="${randomSide.img}">
+    <img class = "results-img" alt="${randomSide.name}"src="${randomSide.img}">
     <span class = "results-text">${randomSide.name}</span>
     <a href="${randomSide.link}" class = "find-recipe-button"><img src="https://static.thenounproject.com/png/2434646-200.png">Find a Recipe</a>
     `
@@ -39,7 +39,7 @@ function pushRandomMain(){
     var randomMain = mains[randomMainIndex];
     results.innerHTML = `
     <span class = "make-text">You should make:</span>
-    <img class = "results-img" src="${randomMain.img}">
+    <img class = "results-img" alt="${randomMain.name}"src="${randomMain.img}">
     <span class = "results-text">${randomMain.name}</span>
     <a href="${randomMain.link}" class = "find-recipe-button"><img src="https://static.thenounproject.com/png/2434646-200.png">Find a Recipe</a>
     `
@@ -50,7 +50,7 @@ function pushRandomDessert(){
     var randomDessert = desserts[randomDessertIndex];
     results.innerHTML = `
     <span class = "make-text">You should make:</span>
-    <img class = "results-img" src="${randomDessert.img}">
+    <img class = "results-img" alt="${randomDessert.name}"src="${randomDessert.img}">
     <span class = "results-text">${randomDessert.name}</span>
     <a href="${randomDessert.link}" class = "find-recipe-button"><img src="https://static.thenounproject.com/png/2434646-200.png">Find a Recipe</a>
     
