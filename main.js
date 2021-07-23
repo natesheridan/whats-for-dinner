@@ -25,6 +25,7 @@ function updateRadioValue(){
 function pushRandomSide(){
     var randomSideIndex = getRandomIndex(sides);
     var randomSide = sides[randomSideIndex];
+    console.log(randomSide)
     results.innerHTML = `
     <span class = "make-text">You should make:</span>
     <img class = "results-img" src="${randomSide.img}">
@@ -32,7 +33,7 @@ function pushRandomSide(){
     <a href="${randomSide.link}" class = "find-recipe-button"><img src="https://static.thenounproject.com/png/2434646-200.png">Find a Recipe</a>
     `
 }
-
+// LINK NOT BEING PUSHED
 function pushRandomMain(){
     var randomMainIndex = getRandomIndex(mains);
     var randomMain = mains[randomMainIndex];
