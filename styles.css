@@ -10,7 +10,7 @@ red - #ee5253
 
 body {
     background-image: 
-    
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.824), rgba(255, 255, 255, 0.0)),
     url("./assets/burger-friends.jpg");
     margin : 0;
     font-family: 'Roboto', sans-serif;
@@ -101,6 +101,7 @@ https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-
    width: 42%;
    min-width: 400px;
    margin-top: 20px;
+   transition: 
 }
 
 /* END CONTENT FLEX */
@@ -233,4 +234,63 @@ input{
     100% {font-size:2.0vw}
 
 }
+
+.entire-meal-flex{
+    padding: 5% 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border: 3px solid green;
+
+
+}
+.meal-title{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.377);
+    border: 3px solid green;
+    width: 100%;
+    font-size: 1.5vw;
+}
+ .meal-item{
+    width: 100%;
+    border: 3px solid green;
+    display: flex;
+    overflow: hidden;
+    padding: 3vh 0 1vh 3vh;
+ }
+ .meal-img{
+    position: flex;
+    width: 6vw;
+    top: 0%;
+    left: 20%;
+    border-radius: 20px;
+    filter: drop-shadow(0 -2mm 1mm #065350);
+    object-fit: cover;
+    height: 100px
+ }
+.meal-text{
+    position: absolute;
+    margin: 1% 20%; 
+    /* background-color: rgba(255, 255, 255, 0.413); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vw;
+}
+ .meal-recipe-btn{
+    position: absolute;
+    height: auto;
+    background-color: #0fb9b079;
+    width: 75px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 0px #2b638f;
+    right: 10%
+
+ }
+ .meal-recipe-btn:hover{
+    box-shadow: 0px 2px 0px #2b638f;
+
+ }
+
+
+
 /* END RESULTS PANE */
