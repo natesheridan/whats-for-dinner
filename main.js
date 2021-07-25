@@ -19,7 +19,7 @@ function updateRadioValue(){
         radioValueLC = radioValue.toLowerCase();
     }
     else if (radioValue === ""){
-        radioValueLC = "empty";
+        radioValueLC = false;
     }
 }
 
@@ -50,7 +50,7 @@ function pushRandomSide(){
     <a href="${randomSide.link}" class = "find-recipe-button"><img src="https://static.thenounproject.com/png/2434646-200.png">Find a Recipe</a>
     `
 }
-// LINK NOT BEING PUSHED
+
 function pushRandomMain(){
     pushLoadingSrcn();
     var randomMainIndex = getRandomIndex(mains);
@@ -87,20 +87,23 @@ function pushRandomMeal(){
     results.innerHTML = `
     <span class = "meal-title">A good meal for you:</span>
     <div class = "entire-meal-flex">
+        <a href="${randomSide.link}">
         <div class ="meal-item">
         <img class = "meal-img" alt="${randomSide.name}" src="${randomSide.img}">
         <span class = "meal-text">${randomSide.name}</span>
-        <a href="${randomSide.link}"><img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
+        <img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
       </div>
         <div class ="meal-item">
+        <a href="${randomMain.link}">
         <img class = "meal-img" alt="${randomMain.name}" src="${randomMain.img}">
         <span class = "meal-text">${randomMain.name}</span>
-        <a href="${randomMain.link}"><img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
+        <img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
       </div>
         <div class ="meal-item">
+        <a href="${randomDessert.link}">
           <img class = "meal-img" alt="${randomDessert.name}" src="${randomDessert.img}">
           <span class = "meal-text">${randomDessert.name}</span>
-          <a href="${randomDessert.link}"><img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
+          <img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
         </div>
     </div>`
 }
@@ -123,7 +126,11 @@ function getRandomIndex(array) {
   }
   
   
-  
+function showCookBtn(){
+    letsCookButton.classList.remove('hidden');
+    letsCookButton.classList.add('visible');
+}
+
 
 letsCookButton.addEventListener('click', function(){
     updateRadioValue();
@@ -139,9 +146,17 @@ letsCookButton.addEventListener('click', function(){
     else if (radioValueLC === "entire"){
         pushRandomMeal() 
     }
-    else if (radioValueLC === "empty")
+    else if (radioValueLC === false){
         pushErrorBalloon()
+}})
+
+
+formElement.addEventListener('click', function(){
+    updateRadioValue();
+    if (radioValueLC){
+        showCookBtn()
+    }
+    else if (radioValueLC === false){
+        pushErrorBalloon()
+    }
 })
-
-
-formElement.addEventListener('click', updateRadioValue)
