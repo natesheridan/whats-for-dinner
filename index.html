@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    
   </head>
   <body>
     <div class="navbar">
@@ -14,14 +15,16 @@
         <li><a id="addRecipeBtn" class="addRecipeBtn">Add a Recipe</a></li>
       </ul>
     </div>
-
+    <div class="error-balloon" id="error-balloon">
+      Please select either side, main dish, dessert, or entire meal!
+    </div>
     <div class="content">
       <div class="pane">
         <div>
           <span class="selection-title"><span style="color:red;font-size:1.5vw">*</span>What are you looking for?<span style="color:red;font-size:1.5vw">*</span></span>
           <form class="selection-radios" name="dishchoice" id="radios">
             <ul>
-            <li><input type="radio" name="option" value="Side"><label for="sideRadio"> Side</label></li>
+            <li><input type="radio" name="option" value="Side"><label for="Side"> Side</label></li>
             <li><input type="radio" name="option" value="Main Dish"><label for="sideRadio"> Main Dish</label></li>
             <li><input type="radio" name="option" value="Dessert"><label for="sideRadio"> Dessert</label></li>
             <li><input type="radio" name="option" value="Entire Meal"><label for="sideRadio"> Entire Meal</label></li>
@@ -32,15 +35,16 @@
       </div>
 
       <div class="pane">
-        <!-- <img class="cookpot" src="assets/cookpot.svg"> -->
+        <img class="resultsIMG" id="resultsIMG" src="assets/cookpot.svg">
+        <section class="results hidden" id="results">
 
-        <section class="results" id="results">
-          <span class = "meal-title">A good meal for you:</span>
+          <span class="error-message">An error has occurred, please select an option on the left and try again!</span>
+          <!-- <span class = "meal-title">A good meal for you:</span>
           <div class = "entire-meal-flex">
               <div class ="meal-item">
                 <img class = "meal-img" src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-articleLarge.jpg">
                 <span class = "meal-text">name1</span>
-                <a href="" "><img  class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
+                <a href=""><img  class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
               </div>
               <div class ="meal-item">
                 <img class = "meal-img" src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-articleLarge.jpg">
@@ -51,7 +55,7 @@
                 <img class = "meal-img" src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-articleLarge.jpg">
                 <span class = "meal-text">name3</span>
                 <a href=""><img class = "meal-recipe-btn" src="https://static.thenounproject.com/png/2434646-200.png"></a>
-              </div>
+              </div> -->
           </div>
         </section>
       </div>

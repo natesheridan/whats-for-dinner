@@ -17,6 +17,27 @@ body {
     height: 100%;
     width: 100%;
 }
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+  }
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0s, opacity 0.0s linear;
+}
+.quick-hide{
+    display: none;
+}
+.error-balloon{
+    position: fixed;
+    background-color: #ff656562;
+    padding: 20 20;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+}
 .navbar {
     list-style-type: none;
     margin: 0;
@@ -107,6 +128,14 @@ https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-
 /* END CONTENT FLEX */
 /* SELECTION PANE */
 
+.error-message{
+    background-color: rgba(211, 30, 30, 0.171);
+    position: absolute;
+    font-size: 2vw;
+    transform: translate(-50%, 20%);
+    border-radius: 20px;
+}
+
 .selection-title{
     position: fixed;
     /* border: 1px solidrgb(0, 34, 5); */
@@ -166,7 +195,7 @@ input{
 
 
 
-.cookpot{
+.resultsIMG{
     position: absolute;
     height: 55%;
     width: 55%;
@@ -193,7 +222,7 @@ input{
     transform: translate(-50%, -50%);
     margin: 40% 0%; 
     border-radius: 20px;
-    filter: drop-shadow(0 -6mm 4mm #065350);
+    filter: drop-shadow(0 0mm 10mm #000000);
     object-fit: cover;
     height: 150px
 }
@@ -222,9 +251,6 @@ input{
     width: 1vw;
     padding: 0 0 0 0;
 }
-.find-recipe-button:{
-
-}
 @keyframes hoverGrow{
     0% {font-size:2.0vw}
     50% {
@@ -241,23 +267,22 @@ input{
     display: flex;
     flex-direction: column;
 
-    border: 3px solid green;
-
-
 }
 .meal-title{
     position: relative;
-    background-color: rgba(255, 255, 255, 0.377);
-    border: 3px solid green;
     width: 100%;
-    font-size: 1.5vw;
+    padding: 20px 20px;
+    margin-top: 20px;
+    font-size: 2vw;
+    font-family: 'Amatic SC';
 }
  .meal-item{
-    width: 100%;
-    border: 3px solid green;
+    width: 85%;
     display: flex;
     overflow: hidden;
-    padding: 3vh 0 1vh 3vh;
+    margin: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.459);
+    border-radius: 20px;
  }
  .meal-img{
     position: flex;
@@ -265,32 +290,39 @@ input{
     top: 0%;
     left: 20%;
     border-radius: 20px;
-    filter: drop-shadow(0 -2mm 1mm #065350);
+    filter: drop-shadow(0 0mm 5mm #065350);
     object-fit: cover;
     height: 100px
  }
 .meal-text{
     position: absolute;
-    margin: 1% 20%; 
+    margin: 3% 19%; 
     /* background-color: rgba(255, 255, 255, 0.413); */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2vw;
+    
 }
  .meal-recipe-btn{
     position: absolute;
     height: auto;
-    background-color: #0fb9b079;
+    background-color: #cccccc93;
+    border: 1px solid rgb(0, 0, 0);
     width: 75px;
     border-radius: 20px;
     box-shadow: 0px 5px 0px #2b638f;
-    right: 10%
+    right: 10%;
+    margin-top: 1.5%;
 
  }
  .meal-recipe-btn:hover{
     box-shadow: 0px 2px 0px #2b638f;
+    margin-top: 1.55%;
 
  }
 
+ .meal-item:hover{
+     background-color: rgba(216, 248, 250, 0.575)
+ }
 
 
 /* END RESULTS PANE */
