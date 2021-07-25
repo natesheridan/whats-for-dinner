@@ -65,23 +65,22 @@ var mains = [
 ]
 var desserts = [
     {img:"https://simplyhomecooked.com/wp-content/uploads/2020/04/apple-pie-recipe-13-scaled.jpg" , name: "Apple Pie" , link: ""},
-    {img:"" , name: "Lemon Meringue Pie" , link: ""},
-    {img:"" , name: "Black Forest Cake" , link: ""},
-    {img:"" , name: "Banana Bread" , link: ""},
-    {img:"" , name: "Peach Cobbler" , link: ""},
-    {img:"" , name: "Cheesecake" , link: ""},
-    {img:"" , name: "Funfetti Cake" , link: ""},
-    {img:"" , name: "Baklava" , link: ""},
-    {img:"" , name: "Flan" , link: ""},
-    {img:"" , name: "Macarons" , link: ""},
-    {img:"" , name: "Macaroons" , link: ""},
-    {img:"" , name: "Chocolate Cupcakes" , link: ""},
-    {img:"" , name: "Pavlova" , link: ""},
-    {img:"" , name: "Pumpkin Pie" , link: ""},
-    {img:"" , name: "Key Lime Pie" , link: ""},
-    {img:"" , name: "Tart Tatin" , link: ""},
-    {img:"" , name: "Croissants" , link: ""},
-    {img:"" , name: "Eclairs" , link: ""},
+    {img:"https://images-gmi-pmc.edge-generalmills.com/a910e898-ce3a-4d64-a6e0-a6580559d6ae.jpg" , name: "Lemon Meringue Pie" , link: ""},
+    {img:"https://preppykitchen.com/wp-content/uploads/2016/07/black-forest-master-recipe-image.jpg" , name: "Black Forest Cake" , link: ""},
+    {img:"https://www.momontimeout.com/wp-content/uploads/2021/05/easy-banana-bread-recipe-square.jpeg" , name: "Banana Bread" , link: ""},
+    {img:"https://joyfoodsunshine.com/wp-content/uploads/2020/05/peach-cobbler-recipe-7.jpg" , name: "Peach Cobbler" , link: ""},
+    {img:"https://www.cookingclassy.com/wp-content/uploads/2019/11/cheesecake-8.jpg" , name: "Cheesecake" , link: ""},
+    {img:"https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/167074.jpg?output-format=auto&output-quality=auto" , name: "Funfetti Cake" , link: ""},
+    {img:"https://www.fifteenspatulas.com/wp-content/uploads/2012/03/Baklava-Fifteen-Spatulas-11-480x270.jpg" , name: "Baklava" , link: ""},
+    {img:"https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Creamy-Caramel-Flan_EXPS_FT20_2197_F_0723_1.jpg" , name: "Flan" , link: ""},
+    {img:"https://www.bakedbyanintrovert.com/wp-content/uploads/2020/05/Strawberry-Macarons-Recipe-Image-735x735.jpg" , name: "Macaroons" , link: ""},
+    {img:"https://handletheheat.com/wp-content/uploads/2016/02/best-chocolate-cupcakes-recipe-SQUARE.jpg" , name: "Chocolate Cupcakes" , link: ""},
+    {img:"https://preppykitchen.com/wp-content/uploads/2021/04/Pavlova-recpe-new.jpg" , name: "Pavlova" , link: ""},
+    {img:"https://i0.wp.com/www.livewellbakeoften.com/wp-content/uploads/2016/11/Homemade-Pumpkin-Pie-4.jpg?fit=1360%2C1360&ssl=1" , name: "Pumpkin Pie" , link: ""},
+    {img:"https://www.onceuponachef.com/images/2019/06/Key-Lime-Pie-760x948.jpg" , name: "Key Lime Pie" , link: ""},
+    {img:"https://assets.bonappetit.com/photos/57acf6ad53e63daf11a4dbf3/5:7/w_1270,h_1778,c_limit/vanilla-bean-tarte-tatin.jpg" , name: "Tart Tatin" , link: ""},
+    {img:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-201217-shortcut-croissants-006-ab-1614354652.jpg?crop=1.00xw:0.751xh;0,0.0480xh&resize=1200:*" , name: "Croissants" , link: ""},
+    {img:"https://www.bakefromscratch.com/wp-content/uploads/2019/06/Eclairs175JBfull-1-696x557.jpg" , name: "Eclairs" , link: ""},
 ]
 
 
@@ -105,6 +104,6 @@ for (var i = desserts.length - 1; i >= 0; i--){
     // console.log(i)
     var genLinkPerName = new LinkGeneration(desserts[i].name)
     genLinkPerName.URLCreate();
-    var URLString = desserts.URLString;
+    var URLString = genLinkPerName.URLString;
     desserts[i].link = URLString;
 }
