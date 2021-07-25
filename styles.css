@@ -30,14 +30,6 @@ body {
 .quick-hide{
     display: none;
 }
-.error-balloon{
-    position: fixed;
-    background-color: #ff656562;
-    padding: 20 20;
-    width: 100%;
-    text-align: center;
-    font-size: 2vw;
-}
 .navbar {
     list-style-type: none;
     margin: 0;
@@ -137,14 +129,14 @@ https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-
 }
 
 .selection-title{
-    position: fixed;
+    position: absolute;
     /* border: 1px solidrgb(0, 34, 5); */
     /* background-color: rgba(255, 255, 255, 0.413); */
     border-radius: 50px;
-    font-size: 2vw;
-    margin: 20px 20px 100px;
+    font-size: 3vh;
+    margin: 5% 10%;
     border-radius: 1px;
-    padding: 50px;
+    padding: ;
     text-align: center;
     font-family: 'Amatic SC';
     
@@ -152,28 +144,33 @@ https://files.slack.com/files-pri/T029P2S9M-F028D31DVPG/screenshot_at_jul_19_23-
 .selection-radios{
     position: absolute;
     /* background-color: rgba(255, 255, 255, 0.413); */
-    font-size: 1.5vw;
-    margin: 20% 10%;
+    font-size: 2vh;
+    margin: 12% 10%;
+    font-family: 'Encode Sans SC', sans-serif;
 }
 input{
     margin-top: 4vh;
+}
+input[type=radio]{
+    height: 2vh;
+    width: 2vh;
 }
 .submitBtn{
     position: absolute;
     border: 1px solidrgb(0, 34, 5);
     background-color: #0fb9b0;
     margin: 4% 15%;
-    bottom: 1vh;
+    bottom: 5%;
     animation: grow 1s infinite;
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Encode Sans SC', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.7vh;
 }
 @keyframes grow {
-    0% {font-size: 2vw ;}
-    50% {font-size: 2.04vw;}
-    100% {font-size: 2vw;}
+    0% {font-size: 1.7vh ;}
+    50% {font-size: 1.74vh;}
+    100% {font-size: 1.7vh;}
 
   }
 .submitBtn:hover{
@@ -181,12 +178,12 @@ input{
     animation: hoverGrow 1s infinite;
 }
 @keyframes hoverGrow{
-    0% {font-size:2.0vw}
+    0% {font-size:1.7vh}
     50% {
-        font-size:2.2vw;
-        background-color: #0b8b85;
+        font-size:1.9vh;
+        background-color: #a3fffa;
     }
-    100% {font-size:2.0vw}
+    100% {font-size:1.7vh}
 
 }
 
@@ -251,15 +248,6 @@ input{
     width: 1vw;
     padding: 0 0 0 0;
 }
-@keyframes hoverGrow{
-    0% {font-size:2.0vw}
-    50% {
-        font-size:2.2vw;
-        background-color: #0b8b85;
-    }
-    100% {font-size:2.0vw}
-
-}
 
 .entire-meal-flex{
     padding: 5% 0 0 0;
@@ -296,10 +284,11 @@ input{
  }
 .meal-text{
     position: absolute;
-    margin: 3% 19%; 
-    /* background-color: rgba(255, 255, 255, 0.413); */
+    margin: 0% 0%; 
+    padding: 3vh 30% 3vh 1%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    color: 000;
     
 }
  .meal-recipe-btn{
