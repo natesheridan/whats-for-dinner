@@ -33,7 +33,7 @@ function pushLoadingSrcn(){
             results.classList.remove('hidden');
             results.classList.add('visible');
             resultsIMG.classList.add('hidden')
-            resultIMG.classList.remove('visible')
+            resultsIMG.classList.remove('visible')
     }, 1500);
 }
 
@@ -146,7 +146,7 @@ letsCookButton.addEventListener('click', function(){
     else if (radioValueLC === "entire"){
         pushRandomMeal() 
     }
-    else if (radioValueLC === false){
+    else if (radioValueLC === ""){
         pushErrorBalloon()
 }})
 
