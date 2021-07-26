@@ -1,23 +1,28 @@
-# What's for Dinner?
+What's for Dinner 
+Solo Project
 
-## Overview
+Contributors: Nate Sheridan
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+What's For Dinner is an web-app that answers the age old question that is asked daily - "Whats for dinner". When using the page, you are greeted with a radio based form that asks you what type of meal you want? From there you can hit lets cook and find something good to eat tonight. Using links in the results pane you can easily search google for a recipe and find your favorite one. The website is responsive and can be viewed on mobile, tablet and large form factor screens using flexboxes in CSS, It has error handling and a fail safe to notify users on misclick of radios.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+(Deploy Link)[https://natesheridan.github.io/whats-for-dinner/]
 
-## Learning Goals
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+**Technologies Used**
+- HTML
+- CSS
+- JavaScript
 
-## Setup
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+**Future Additions:**
+ - Clear Button
+ - Functionality to the add recipe button
+
+
+**Screenshots**
+
+![Meal Type Selector](https://user-images.githubusercontent.com/83609521/126921418-c241ef6d-60bf-450f-b28d-cb7e10adb3ca.png)
+![Meal Results](https://user-images.githubusercontent.com/83609521/126921385-a22fe07a-a92b-4760-a240-6302e5c4aebc.png)
+![Generate Entire meal](https://user-images.githubusercontent.com/83609521/126921481-763e8acb-73fb-4c0b-994d-ec5edc098cc4.png)
+
